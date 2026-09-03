@@ -49,7 +49,7 @@ python3 -m pip install (package name)
 ```
 
 ### 3.  Creation d'un environnement
-La création d'environnement est utiles pour les pro
+La création d'environnement est utiles pour les projets nécessitant différentes version d'un meme packages, afin d'éviter des breaks lors d'execution de code. Certains projets peuvent requiert la version 1.01 alors qu'un autre aurait besoin de 1.02
 ```bash
 python3 -m venv venv
 
