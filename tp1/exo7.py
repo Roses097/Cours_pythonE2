@@ -25,7 +25,7 @@ def immatri():
                     pass
                 print(lett)
                 lett += chr(randint(65, 90))
-                
+
                 if lett not in notAlloweds:
                     print(f"lett is : {lett}")
                     letter += lett
@@ -38,7 +38,3 @@ def immatri():
 
     imma = letters[0] + "-" + numb + "-" + letters[1]
     print(f"voici votre plaque d'immatriculation : {imma}")
-
-
-for i in range(10):
-    immatri()

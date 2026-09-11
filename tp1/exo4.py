@@ -16,14 +16,15 @@ def pin(n):
     return piResult
 
 
-while True:
-    try:
-        n = int(input("Saisissez l'approximation voulus : "))
-        if n < 0:
-            print("Veuillez saisir un nombre positif ")
-        else:
-            break
-    except ValueError:
-        print("Veuillez saisir un nombre entier positif ")
+def pi():
+    while True:
+        try:
+            n = int(input("Saisissez l'approximation voulus : "))
+            if n < 0:
+                print("Veuillez saisir un nombre positif ")
+            else:
+                break
+        except ValueError:
+            print("Veuillez saisir un nombre entier positif ")
 
-print(pin(n))
+    print(pin(n))
