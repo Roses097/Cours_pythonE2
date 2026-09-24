@@ -12,8 +12,8 @@ args = parser.parse_args()
 try:
     with open(args.directory, "r") as f:
         lines = f.readlines() #list of lines of the whole file
-except FileNotFoundError:
-    print("Wrong File")
+except IOError as error:
+    print("Error : ",error)
     exit()
 
 if args.mode == "head":
@@ -21,7 +21,8 @@ if args.mode == "head":
 elif args.mode == "tail":
     result = lines[-args.size:] # -args... bc so it start from the bottom at a said line before the end which is the end ( [-X: ] the start is backward )
 else:
-    print("No correct argument entered, processed without head/tail")
+    print("No correct argument entered, processed without head/tail\nEntire file will be printed !!")
+    
     
 for line in result:
     print(line,end="") #since lines is a list of all lines in the file, it then print them one by one
