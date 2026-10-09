@@ -49,23 +49,16 @@ print("\n\n\n")
 print("\n\n\n")
 print("\n\n\n")
 
-
 from exo3 import *
 
-colors = []
-for i in range(4):
-    colors.append(CardColor(shades[i], shade_names[i], foreground_colors[i], Back.WHITE))
+my_deck = Deck()
+print(my_deck)
+my_deck.init52_cards() 
+print(f"{my_deck}\n\n")
+my_deck.Shuffle()      
+print(f"{my_deck}\n\n")
 
-values = []
-for i in range(13):
-    values.append(CardValue(value_txts[i], value_points[i]))
+carte = my_deck.Draw()  
+print(f"{my_deck}\n\n")
 
-deck = []
-for color in colors:
-    for value in values:
-        deck.append(Card(value, color))
-
-for card in deck:
-    print(card, end=" ")
-print()
-print(len(deck))   # 52
+my_deck.Discard(carte) 
